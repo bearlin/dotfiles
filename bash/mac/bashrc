@@ -1,0 +1,17 @@
+# http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html
+
+## Colorize the ls output ##
+alias ls='ls -G'
+## Use a long listing format ##
+alias ll='ls -la'
+## Show hidden files ##
+alias l.='ls -d .* -G'
+ 
+## Colorize the grep command output for ease of use (good for log files)##
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+## Start calculator with math support
+alias bc='bc -l'
+ 
