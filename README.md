@@ -1,6 +1,21 @@
 # dotfiles
 my dotfiles
 
+# Auto install steps:  
+Get auto_install_dotfiles.sh use curl or wget :  
+```sh
+  curl -LSso "auto_install.sh" "https://raw.githubusercontent.com/bearlin/dotfiles/master/auto_install_dotfiles.sh"
+```
+Or :  
+```sh
+  wget "https://raw.githubusercontent.com/bearlin/dotfiles/master/auto_install_dotfiles.sh" -O "auto_install_dotfiles.sh" 
+```
+Then run the script:  
+```sh
+  chmod +x auto_install_dotfiles.sh
+  ./auto_install_dotfiles.sh
+```
+
 #References
 [USING GIT AND GITHUB TO MANAGE YOUR DOTFILES](http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/)  
 [Getting Started With Dotfiles](https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789)  
