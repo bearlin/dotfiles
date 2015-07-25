@@ -10,7 +10,13 @@ DOTFILESREPOSITORY=https://github.com/bearlin/dotfiles.git  # dotfiles repositor
 DOTFILESHOME=~/dotfiles                                     # dotfiles directory cloned from my github.com
 DOTFILESBACKUP=~/dots_backup                                # old ~/.* backup
 FILES="bashrc bash_profile bash_history bash_logout"                    # list of files/folders to symlink in  home directory
+
 PLATFORM=$1 # mac or cygwin
+if [ "$1" == "" ]; then
+  PLATFORM="ubuntu"
+fi
+echo "PLATFORM=$PLATFORM"
+
 warn() {
   echo "$1" >&2
 }
@@ -62,10 +68,16 @@ echo "Clone the $DOTFILESREPOSITORY to $DOTFILESHOME"
 git clone "$DOTFILESREPOSITORY" "$DOTFILESHOME"
 
 # Create symlinks from any files in the DOTFILESHOME directory specified in $files
-for file in $FILES; do
-    echo -e "\tCreating symlink : ln -s $DOTFILESHOME/bash/$PLATFORM/$file ~/.$file"
-    ln -s $DOTFILESHOME/bash/$PLATFORM/$file ~/.$file
-done
+# ==============================================================================
+# For bash : 
+# -----------------------------------------------------------------------
+echo -e "\tCreating BASH symlinks"
+ln -s $DOTFILESHOME/bash/bash_profile ~/.bash_profile
+ln -s $DOTFILESHOME/bash/bash_history ~/.bash_hostory
+ln -s $DOTFILESHOME/bash/bash_logout ~/.bash_logout
+ln -s $DOTFILESHOME/bash/$PLATFORM/bashrc ~/.bashrc
+# -----------------------------------------------------------------------
+# ==============================================================================
 
 cd -
 byebye "$@" "bearlin's dotfiles is installed!"
