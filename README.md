@@ -5,15 +5,16 @@ my dotfiles
 Get auto_install_dotfiles.sh use curl or wget :  
 ```sh
   curl -LSso "auto_install_dotfiles.sh" "https://raw.githubusercontent.com/bearlin/dotfiles/master/auto_install_dotfiles.sh"
-```
-Or :  
-```sh
+  # Or..
   wget "https://raw.githubusercontent.com/bearlin/dotfiles/master/auto_install_dotfiles.sh" -O "auto_install_dotfiles.sh" 
 ```
+
 Then run the script:  
 ```sh
   chmod +x auto_install_dotfiles.sh
-  ./auto_install_dotfiles.sh [mac|cygwin]
+  ./auto_install_dotfiles.sh mac
+  # Or..
+  ./auto_install_dotfiles.sh cygwin
 ```
 
 #References

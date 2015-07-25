@@ -65,8 +65,8 @@ git clone "$DOTFILESREPOSITORY" "$DOTFILESHOME"
 
 # Create symlinks from any files in the DOTFILESHOME directory specified in $files
 for file in $FILES; do
-    echo "\tCreating symlink : ln -s $DOTFILESHOME/$PLATFORM/$file ~/.$file"
-    ln -s $DOTFILESHOME/$PLATFORM/$file ~/.$file
+    echo "\tCreating symlink : ln -s $DOTFILESHOME/bash/$PLATFORM/$file ~/.$file"
+    ln -s $DOTFILESHOME/bash/$PLATFORM/$file ~/.$file
 done
 
 cd -
