@@ -4,7 +4,7 @@ my dotfiles
 # Auto install steps:  
 Get auto_install_dotfiles.sh use curl or wget :  
 ```sh
-  curl -LSso "auto_install.sh" "https://raw.githubusercontent.com/bearlin/dotfiles/master/auto_install_dotfiles.sh"
+  curl -LSso "auto_install_dotfiles.sh" "https://raw.githubusercontent.com/bearlin/dotfiles/master/auto_install_dotfiles.sh"
 ```
 Or :  
 ```sh
