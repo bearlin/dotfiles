@@ -14,6 +14,8 @@ Then run the script:
   chmod +x auto_install_dotfiles.sh
   ./auto_install_dotfiles.sh mac
   # Or..
+  ./auto_install_dotfiles.sh ubuntu
+  # Or..
   ./auto_install_dotfiles.sh cygwin
 ```
 

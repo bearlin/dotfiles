@@ -9,7 +9,7 @@ HOMEDIR=~
 DOTFILESREPOSITORY=https://github.com/bearlin/dotfiles.git  # dotfiles repository from my github.com
 DOTFILESHOME=~/dotfiles                                     # dotfiles directory cloned from my github.com
 DOTFILESBACKUP=~/dots_backup                                # old ~/.* backup
-FILES="bashrc bash_profile bash_history"                    # list of files/folders to symlink in  home directory
+FILES="bashrc bash_profile bash_history bash_logout"                    # list of files/folders to symlink in  home directory
 PLATFORM=$1 # mac or cygwin
 warn() {
   echo "$1" >&2
@@ -37,7 +37,7 @@ byebye() {
 }
 usage() {
   echo "Usage: " && \
-  echo "$0 [mac|cygwin]"
+  echo "$0 [mac|ubuntu|cygwin]"
 }
 
 # Go to HOMEDIR
