@@ -73,7 +73,7 @@ git clone "$DOTFILESREPOSITORY" "$DOTFILESHOME"
 # -----------------------------------------------------------------------
 echo -e "\tCreating BASH symlinks"
 ln -s $DOTFILESHOME/bash/bash_profile ~/.bash_profile
-ln -s $DOTFILESHOME/bash/bash_history ~/.bash_hostory
+ln -s $DOTFILESHOME/bash/bash_history ~/.bash_history
 ln -s $DOTFILESHOME/bash/bash_logout ~/.bash_logout
 ln -s $DOTFILESHOME/bash/$PLATFORM/bashrc ~/.bashrc
 # -----------------------------------------------------------------------
