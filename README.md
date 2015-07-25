@@ -13,7 +13,7 @@ Or :
 Then run the script:  
 ```sh
   chmod +x auto_install_dotfiles.sh
-  ./auto_install_dotfiles.sh
+  ./auto_install_dotfiles.sh [mac|cygwin]
 ```
 
 #References

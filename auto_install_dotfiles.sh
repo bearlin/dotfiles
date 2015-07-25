@@ -10,6 +10,7 @@ DOTFILESREPOSITORY=https://github.com/bearlin/dotfiles.git  # dotfiles repositor
 DOTFILESHOME=~/dotfiles                                     # dotfiles directory cloned from my github.com
 DOTFILESBACKUP=~/dots_backup                                # old ~/.* backup
 FILES="bashrc bash_profile bash_history"                    # list of files/folders to symlink in  home directory
+PLATFORM=$1 # mac or cygwin
 warn() {
   echo "$1" >&2
 }
@@ -36,7 +37,7 @@ byebye() {
 }
 usage() {
   echo "Usage: " && \
-  echo "$0"
+  echo "$0 [mac|cygwin]"
   #echo "$0" && \
   #echo "$0 force (NOTE: this will force remove previous cloned $DOTFILESHOME from my github.com, then clone a new one" 
 }
@@ -56,7 +57,7 @@ for file in $FILES; do
 done
 # Move old DOTFILESHOME to DOTFILESBACKUP
 echo "Move old DOTFILESHOME to DOTFILESBACKUP"
-mv $DOTFILESHOME $DOTFILESREPOSITORY
+mv $DOTFILESHOME $DOTFILESBACKUP
 
 # Clone the DOTFILESREPOSITORY to DOTFILESHOME
 echo "Clone the $DOTFILESREPOSITORY to $DOTFILESHOME"
@@ -64,8 +65,8 @@ git clone "$DOTFILESREPOSITORY" "$DOTFILESHOME"
 
 # Create symlinks from any files in the DOTFILESHOME directory specified in $files
 for file in $FILES; do
-    echo "\tCreating symlink : ln -s $DOTFILESHOME/$file ~/.$file"
-    ln -s $DOTFILESHOME/$file ~/.$file
+    echo "\tCreating symlink : ln -s $DOTFILESHOME/$PLATFORM/$file ~/.$file"
+    ln -s $DOTFILESHOME/$PLATFORM/$file ~/.$file
 done
 
 cd -
