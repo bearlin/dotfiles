@@ -38,8 +38,6 @@ byebye() {
 usage() {
   echo "Usage: " && \
   echo "$0 [mac|cygwin]"
-  #echo "$0" && \
-  #echo "$0 force (NOTE: this will force remove previous cloned $DOTFILESHOME from my github.com, then clone a new one" 
 }
 
 # Go to HOMEDIR
@@ -52,7 +50,7 @@ mkdir -p $DOTFILESBACKUP
 # Move any existing dotfiles in HOMEDIR to DOTFILESBACKUP directory
 echo "Move any existing dotfiles in $HOMEDIR to $DOTFILESBACKUP directory"
 for file in $FILES; do
-    echo "\tMoving ~/.$file to $DOTFILESBACKUP"
+    echo -e "\tMoving ~/.$file to $DOTFILESBACKUP"
     mv ~/.$file $DOTFILESBACKUP
 done
 # Move old DOTFILESHOME to DOTFILESBACKUP
@@ -65,7 +63,7 @@ git clone "$DOTFILESREPOSITORY" "$DOTFILESHOME"
 
 # Create symlinks from any files in the DOTFILESHOME directory specified in $files
 for file in $FILES; do
-    echo "\tCreating symlink : ln -s $DOTFILESHOME/bash/$PLATFORM/$file ~/.$file"
+    echo -e "\tCreating symlink : ln -s $DOTFILESHOME/bash/$PLATFORM/$file ~/.$file"
     ln -s $DOTFILESHOME/bash/$PLATFORM/$file ~/.$file
 done
 
