@@ -6,10 +6,10 @@
 # [dotfiles.github.io - Your unofficial guide to dotfiles on GitHub](https://dotfiles.github.io/)  
 
 HOMEDIR=~
-DOTFILESREPOSITORY=https://github.com/bearlin/dotfiles.git  # dotfiles repository from my github.com
-DOTFILESHOME=~/dotfiles                                     # dotfiles directory cloned from my github.com
-DOTFILESBACKUP=~/dots_backup                                # old ~/.* backup
-FILES_BASH="bashrc bash_profile bash_history bash_logout"                    # list of files/folders to symlink in  home directory
+DOTFILESREPOSITORY=https://github.com/bearlin/dotfiles.git      # dotfiles repository from my github.com
+DOTFILESHOME=~/dotfiles                                         # dotfiles directory cloned from my github.com
+DOTFILESBACKUP=~/dots_backup                                    # old ~/.* backup
+FILES_TO_BACKUP=".bashrc .bash_profile .bash_history .bash_logout .tmux.conf"  # list of files to move to DOTFILESBACKUP folder
 
 PLATFORM=$1 # mac or cygwin
 if [ "$1" == "" ]; then
@@ -53,12 +53,14 @@ cd "$HOMEDIR"
 echo "Create backup directory $DOTFILESBACKUP"
 rm -rf $DOTFILESBACKUP
 mkdir -p $DOTFILESBACKUP
+
 # Move any existing dotfiles in HOMEDIR to DOTFILESBACKUP directory
 echo "Move any existing BASH dotfiles in $HOMEDIR to $DOTFILESBACKUP directory"
-for file in $FILES_BASHS; do
-    echo -e "\tMoving ~/.$file to $DOTFILESBACKUP"
-    mv ~/.$file $DOTFILESBACKUP
+for file in $FILES_TO_BACKUP; do
+    echo -e "\tMoving ~/$file to $DOTFILESBACKUP"
+    mv ~/$file $DOTFILESBACKUP
 done
+
 # Move old DOTFILESHOME to DOTFILESBACKUP
 echo "Move old DOTFILESHOME to DOTFILESBACKUP"
 mv $DOTFILESHOME $DOTFILESBACKUP
@@ -67,11 +69,11 @@ mv $DOTFILESHOME $DOTFILESBACKUP
 echo "Clone the $DOTFILESREPOSITORY to $DOTFILESHOME"
 git clone "$DOTFILESREPOSITORY" "$DOTFILESHOME"
 
-# Create symlinks from any files in the DOTFILESHOME directory specified in $files
+# Create symlinks from files in the DOTFILESHOME directory
 # ==============================================================================
 # For bash : 
 # -----------------------------------------------------------------------
-echo -e "\tCreating BASH symlinks"
+echo -e "\tCreating BASH symlinks..."
 echo -e "ln -s $DOTFILESHOME/bash/bash_profile ~/.bash_profile"
 echo -e "ln -s $DOTFILESHOME/bash/bash_history ~/.bash_history"
 echo -e "ln -s $DOTFILESHOME/bash/bash_logout ~/.bash_logout"
@@ -80,6 +82,13 @@ ln -s $DOTFILESHOME/bash/bash_profile ~/.bash_profile
 ln -s $DOTFILESHOME/bash/bash_history ~/.bash_history
 ln -s $DOTFILESHOME/bash/bash_logout ~/.bash_logout
 ln -s $DOTFILESHOME/bash/$PLATFORM/bashrc ~/.bashrc
+# -----------------------------------------------------------------------
+
+# For tmux: 
+# -----------------------------------------------------------------------
+echo -e "\tCreating tmux symlinks..."
+echo -e "ln -s $DOTFILESHOME/tmux/tmux.conf ~/.tmux.conf"
+ln -s $DOTFILESHOME/tmux/tmux.conf ~/.tmux.conf
 # -----------------------------------------------------------------------
 # ==============================================================================
 
