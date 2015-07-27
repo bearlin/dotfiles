@@ -8,11 +8,9 @@ tmux new-session -d -s hostlinst
 # The following set of new-window commands create five new windows and executes the command at the end.
 # -t hostlinst:1 tells tmux to "target" the session hostlinst and the window with the id of 1.
 # -n 'Server1' 'ssh xx@x.x.x.x' portion tells tmux to name the window Server1 and execute the 'ssh xx@x.x.x.x' command in it.
-tmux new-window -t hostlinst:1 -n 'Server1' 'ssh linst@127.0.0.1'
-tmux new-window -t hostlinst:2 -n 'Server2' 'ssh linst@127.0.0.1'
-tmux new-window -t hostlinst:3 -n 'Server3' 'ssh linst@127.0.0.1'
-tmux new-window -t hostlinst:4 -n 'Server4' 'ssh linst@127.0.0.1'
-tmux new-window -t hostlinst:5 -n 'Server5' 'ssh linst@127.0.0.1'
+tmux new-window -t hostlinst:1 -n 'Local1'
+tmux new-window -t hostlinst:2 -n 'Local2'
+tmux new-window -t hostlinst:3 -n 'Server1' 'ssh linst@127.0.0.1'
 
 # Tells tmux that you want to active window 1 of session 'hostlinst' 
 tmux select-window -t hostlinst:1
