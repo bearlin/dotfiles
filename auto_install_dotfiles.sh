@@ -7,8 +7,8 @@
 
 HOMEDIR=~
 DOTFILESREPOSITORY=https://github.com/bearlin/dotfiles.git      # dotfiles repository from my github.com
-DOTFILESHOME=~/dotfiles                                         # dotfiles directory cloned from my github.com
-DOTFILESBACKUP=~/dots_backup                                    # old ~/.* backup
+DOTFILESHOME=~/.dotfiles                                        # .dotfiles directory
+DOTFILESBACKUP=~/.dots_backup                                   # old ~/.* backup
 FILES_TO_BACKUP=".bashrc .bash_profile .bash_history .bash_logout .tmux.conf"  # list of files to move to DOTFILESBACKUP folder
 
 PLATFORM=$1 # mac or cygwin
@@ -54,8 +54,8 @@ echo "Create backup directory $DOTFILESBACKUP"
 rm -rf $DOTFILESBACKUP
 mkdir -p $DOTFILESBACKUP
 
-# Move any existing dotfiles in HOMEDIR to DOTFILESBACKUP directory
-echo "Move any existing BASH dotfiles in $HOMEDIR to $DOTFILESBACKUP directory"
+# Move any existing .dotfiles in HOMEDIR to DOTFILESBACKUP directory
+echo "Move any existing BASH .dotfiles in $HOMEDIR to $DOTFILESBACKUP directory"
 for file in $FILES_TO_BACKUP; do
     echo -e "\tMoving ~/$file to $DOTFILESBACKUP"
     mv ~/$file $DOTFILESBACKUP
