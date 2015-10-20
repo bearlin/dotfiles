@@ -9,7 +9,7 @@ HOMEDIR=~
 DOTFILESREPOSITORY=https://github.com/bearlin/dotfiles.git      # dotfiles repository from my github.com
 DOTFILESHOME=~/.dotfiles                                        # .dotfiles directory
 DOTFILESBACKUP=~/.dots_backup                                   # old ~/.* backup
-FILES_TO_BACKUP=".bashrc .bash_profile .bash_history .bash_logout .tmux.conf"  # list of files to move to DOTFILESBACKUP folder
+FILES_TO_BACKUP=".bashrc .bash_profile .bash_history .bash_logout .tmux.conf .minttyrc"  # list of files to move to DOTFILESBACKUP folder
 
 PLATFORM=$1 # mac or cygwin
 if [ "$1" == "" ]; then
@@ -57,8 +57,8 @@ mkdir -p $DOTFILESBACKUP
 # Move any existing .dotfiles in HOMEDIR to DOTFILESBACKUP directory
 echo "Move any existing BASH .dotfiles in $HOMEDIR to $DOTFILESBACKUP directory"
 for file in $FILES_TO_BACKUP; do
-    echo -e "\tMoving ~/$file to $DOTFILESBACKUP"
-    mv ~/$file $DOTFILESBACKUP
+  echo -e "\tMoving ~/$file to $DOTFILESBACKUP"
+  mv ~/$file $DOTFILESBACKUP
 done
 
 # Move old DOTFILESHOME to DOTFILESBACKUP
@@ -89,6 +89,15 @@ ln -s $DOTFILESHOME/bash/$PLATFORM/bashrc ~/.bashrc
 echo -e "\tCreating tmux symlinks..."
 echo -e "ln -s $DOTFILESHOME/tmux/tmux.conf ~/.tmux.conf"
 ln -s $DOTFILESHOME/tmux/tmux.conf ~/.tmux.conf
+# -----------------------------------------------------------------------
+
+# For mintty in cygwin environment: 
+# -----------------------------------------------------------------------
+if [ "$PLATFORM" == "cygwin" ]; then
+  echo -e "\tCreating mintty symlinks..."
+  echo -e "ln -s $DOTFILESHOME/mintty/minttyrc ~/.minttyrc"
+  ln -s $DOTFILESHOME/mintty/minttyrc ~/.minttyrc
+fi
 # -----------------------------------------------------------------------
 # ==============================================================================
 
