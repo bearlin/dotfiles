@@ -7,7 +7,7 @@ Term=xterm-256color
 # ------------------------------
 ForegroundColour = 131, 148, 150
 BackgroundColour =   0,   0,   0
-CursorColour     = 220,  50,  47
+# CursorColour     = 220,  50,  47
 
 Black            =   7,  54,  66
 BoldBlack        =   0,  43,  54
