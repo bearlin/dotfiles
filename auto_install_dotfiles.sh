@@ -102,7 +102,10 @@ if [ "$PLATFORM" == "cygwin" ]; then
   # GNU Global
   echo -e "\tCreating globalrc symlinks..."
   echo -e "ln -s $DOTFILESHOME/global/globalrc ~/.globalrc"
-  ln -s $DOTFILESHOME/global/globalrc ~/.globalrc
+  # WARNING : Use symlinks will cause issue that gtags can't read ~/.globalrc
+  # correctly, so just copy globalrc to ~/.globalrc
+  # ln -s $DOTFILESHOME/global/globalrc ~/.globalrc
+  cp $DOTFILESHOME/global/globalrc ~/.globalrc
 fi
 # -----------------------------------------------------------------------
 # ==============================================================================
