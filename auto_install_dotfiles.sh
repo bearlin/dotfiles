@@ -9,7 +9,7 @@ HOMEDIR=~
 DOTFILESREPOSITORY=https://github.com/bearlin/dotfiles.git      # dotfiles repository from my github.com
 DOTFILESHOME=~/.dotfiles                                        # .dotfiles directory
 DOTFILESBACKUP=~/.dots_backup                                   # old ~/.* backup
-FILES_TO_BACKUP=".bashrc .bash_profile .bash_history .bash_logout .tmux.conf .minttyrc"  # list of files to move to DOTFILESBACKUP folder
+FILES_TO_BACKUP=".bashrc .bash_profile .bash_history .bash_logout .tmux.conf .minttyrc .globalrc"  # list of files to move to DOTFILESBACKUP folder
 
 PLATFORM=$1 # mac or cygwin
 if [ "$1" == "" ]; then
@@ -91,12 +91,18 @@ echo -e "ln -s $DOTFILESHOME/tmux/tmux.conf ~/.tmux.conf"
 ln -s $DOTFILESHOME/tmux/tmux.conf ~/.tmux.conf
 # -----------------------------------------------------------------------
 
-# For mintty in cygwin environment: 
+# For mintty/global in cygwin environment: 
 # -----------------------------------------------------------------------
 if [ "$PLATFORM" == "cygwin" ]; then
-  echo -e "\tCreating mintty symlinks..."
+  # mintty
+  echo -e "\tCreating minttyrc symlinks..."
   echo -e "ln -s $DOTFILESHOME/mintty/minttyrc ~/.minttyrc"
   ln -s $DOTFILESHOME/mintty/minttyrc ~/.minttyrc
+
+  # GNU Global
+  echo -e "\tCreating globalrc symlinks..."
+  echo -e "ln -s $DOTFILESHOME/global/globalrc ~/.globalrc"
+  ln -s $DOTFILESHOME/global/globalrc ~/.globalrc
 fi
 # -----------------------------------------------------------------------
 # ==============================================================================
