@@ -201,24 +201,9 @@
 # Extra PATH settings
 # [gtags for cygwin]
 # -----------------------------
-# Build from source for cygwin: http://unix.stackexchange.com/questions/172019/gtags-for-cygwin
-# gtags for cygwin : http://cha.la.coocan.jp/doc/gnu_global_gcc.html
-
-# [My install steps using DOS and Win32 ports]
-# 1. Download glo651wb.zip (GLOBAL 6.5.1 Win32 (2.1M)) from http://adoxa.altervista.org/global/
-# 2. unzip
-# 3. Set PATH for cygwin:
-#     export PATH="/home/linst/gtags/glo651wb/bin":$PATH
-# 4. Make sure all executable are there:
-#     $ which gtags
-#     /home/linst/gtags/glo651wb/bin/gtags
-#     $ which global
-#     /home/linst/gtags/glo651wb/bin/global
-#     $ which gtags-cscope
-#     /home/linst/gtags/glo651wb/bin/gtags-cscope
-# 5. Try to run:
-#     $ gtags --help
-export PATH="/home/linst/gtags/glo651wb/bin":$PATH
+# It can be built from source and installed to /use/local/bin, so don't need to
+# add extra path here, more details :
+# https://github.com/bearlin/study_build_gnu_global_from_source
 # -----------------------------
 
 
