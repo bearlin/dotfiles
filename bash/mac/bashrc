@@ -15,6 +15,17 @@ alias fgrep='fgrep --color=auto'
 ## Start calculator with math support
 alias bc='bc -l'
 
+## For powerline status line
+# References : http://blog.gtwang.org/linux/powerline-adds-powerful-statuslines-and-prompts-to-vim-and-bash/
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+# Powerline installation directory can be retrieved via 'pip show powerline-status'
+POWERLINE_SCRIPT=/Library/Python/2.7/site-packages/powerline/bindings/bash/powerline.sh
+if [ -f $POWERLINE_SCRIPT ]; then
+  source $POWERLINE_SCRIPT
+fi
+
 # Extra PATH settings
 # [Extra tools under ~/.local/bin/]
 # -----------------------------
