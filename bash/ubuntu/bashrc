@@ -112,3 +112,10 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Extra PATH settings
+# [Extra tools under ~/.local/bin/]
+# -----------------------------
+export PATH=~/.local/bin:$PATH
+# -----------------------------
+#

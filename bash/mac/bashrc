@@ -14,4 +14,10 @@ alias fgrep='fgrep --color=auto'
 
 ## Start calculator with math support
 alias bc='bc -l'
- 
+
+# Extra PATH settings
+# [Extra tools under ~/.local/bin/]
+# -----------------------------
+export PATH=~/.local/bin:$PATH
+# -----------------------------
+#
