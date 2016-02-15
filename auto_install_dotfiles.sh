@@ -106,6 +106,9 @@ if [ "$PLATFORM" == "cygwin" ]; then
   # correctly, so just copy globalrc to ~/.globalrc
   # ln -s $DOTFILESHOME/global/globalrc ~/.globalrc
   cp $DOTFILESHOME/global/globalrc ~/.globalrc
+
+  # If you want to build GNU Global from source:
+  # https://github.com/bearlin/study_build_gnu_global_from_source
 fi
 # -----------------------------------------------------------------------
 # ==============================================================================
