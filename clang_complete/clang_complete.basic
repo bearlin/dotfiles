@@ -1,5 +1,6 @@
 -I/usr/include
 -I/usr/local/include
+-I./boost_installed/include
 -I/Users/bearlin/ws/github/study_pie_3ed/ch06/HashTableUtil
 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1
