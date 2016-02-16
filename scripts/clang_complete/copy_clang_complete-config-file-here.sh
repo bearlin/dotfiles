@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "### Running $0 ###"
+
 DOTVIMHOME=~/.vim
 source $DOTVIMHOME/scripts/handy_functions.sh
 DOTFILESHOME=~/.dotfiles
