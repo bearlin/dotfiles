@@ -203,10 +203,11 @@
 # -----------------------------
 export PATH=~/.local/bin:$PATH
 # -----------------------------
+
 # [gtags for cygwin]
 # -----------------------------
 # It can be built from source and installed to /use/local/bin, so don't need to
 # add extra path here, more details :
 # https://github.com/bearlin/study_build_gnu_global_from_source
 # -----------------------------
-#
+
