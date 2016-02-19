@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# https://powerline.readthedocs.org/en/latest/installation.html
+
 sudo apt-get install python-pip git
 pip install --user git+git://github.com/Lokaltog/powerline
 
