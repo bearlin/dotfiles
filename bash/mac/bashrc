@@ -21,7 +21,7 @@ alias bc='bc -l'
 export PATH=~/.local/bin:$PATH
 # -----------------------------
 
-## For powerline status line
+# Enable powerline for bash
 # -----------------------------
 # References : http://blog.gtwang.org/linux/powerline-adds-powerful-statuslines-and-prompts-to-vim-and-bash/
 which powerline-daemon &>/dev/null
