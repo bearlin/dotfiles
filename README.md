@@ -21,9 +21,20 @@ Then run the script:
   NOTE: Defaul = ubuntu
 ```
 # Set git env (Optional):
-After installed this dotfiles, your ~/.gitconfig already set to user.name=BearLin and user.email=bear.lin.001@gmail.com, you can update them again with below script:
+After installed this dotfiles, your ~/.gitconfig already set to user.name=BearLin , user.email=bear.lin.001@gmail.com and core.editor=vim, you can update them with below commands:  
 ```
-  ~/.dotfiles/scripts/set_env_git.sh [your name] [our email]
+  git config --global user.name [your name]
+  git config --global user.email [your email]
+  git config --global core.editor [your prefered editor]
+
+  e.g.:
+  git config --global user.name "BearLin"
+  git config --global user.email "bear.lin.001@gmail.com"
+  git config --global core.editor vim
+```
+Or with below script:  
+```
+  ~/.dotfiles/scripts/set_env_git.sh [your name] [your email] [your prefered editor]
 
   e.g.:
   ~/.dotfiles/scripts/set_env_git.sh BearLin bear.lin.001@gmail.com vim
