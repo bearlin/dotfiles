@@ -9,7 +9,13 @@ HOMEDIR=~
 DOTFILESREPOSITORY=https://github.com/bearlin/dotfiles.git      # dotfiles repository from my github.com
 DOTFILESHOME=~/.dotfiles                                        # .dotfiles directory
 DOTFILESBACKUP=~/.dots_backup                                   # old ~/.* backup
-FILES_TO_BACKUP=".bashrc .bash_profile .bash_history .bash_logout .tmux.conf .minttyrc .globalrc"  # list of files to move to DOTFILESBACKUP folder
+FILES_TO_BACKUP=".bashrc \
+                 .bash_profile \
+                 .bash_logout \
+                 .tmux.conf \
+                 .minttyrc \
+                 .globalrc \
+                 .gitconfig"  # list of files to move to DOTFILESBACKUP folder
 
 PLATFORM=$1 # mac or cygwin
 if [ "$1" == "" ]; then
@@ -71,27 +77,25 @@ git clone "$DOTFILESREPOSITORY" "$DOTFILESHOME"
 
 # Create symlinks from files in the DOTFILESHOME directory
 # ==============================================================================
-# For bash : 
+# For bash :
 # -----------------------------------------------------------------------
 echo -e "\tCreating BASH symlinks..."
 echo -e "ln -s $DOTFILESHOME/bash/bash_profile ~/.bash_profile"
-echo -e "ln -s $DOTFILESHOME/bash/bash_history ~/.bash_history"
 echo -e "ln -s $DOTFILESHOME/bash/bash_logout ~/.bash_logout"
 echo -e "ln -s $DOTFILESHOME/bash/$PLATFORM/bashrc ~/.bashrc"
 ln -s $DOTFILESHOME/bash/bash_profile ~/.bash_profile
-ln -s $DOTFILESHOME/bash/bash_history ~/.bash_history
 ln -s $DOTFILESHOME/bash/bash_logout ~/.bash_logout
 ln -s $DOTFILESHOME/bash/$PLATFORM/bashrc ~/.bashrc
 # -----------------------------------------------------------------------
 
-# For tmux: 
+# For tmux:
 # -----------------------------------------------------------------------
 echo -e "\tCreating tmux symlinks..."
 echo -e "ln -s $DOTFILESHOME/tmux/tmux.conf ~/.tmux.conf"
 ln -s $DOTFILESHOME/tmux/tmux.conf ~/.tmux.conf
 # -----------------------------------------------------------------------
 
-# For mintty/global in cygwin environment: 
+# For mintty/global in cygwin environment:
 # -----------------------------------------------------------------------
 if [ "$PLATFORM" == "cygwin" ]; then
   # mintty
@@ -110,6 +114,13 @@ if [ "$PLATFORM" == "cygwin" ]; then
   # If you want to build GNU Global from source:
   # https://github.com/bearlin/study_build_gnu_global_from_source
 fi
+# -----------------------------------------------------------------------
+
+# For gitconfig:
+# -----------------------------------------------------------------------
+echo -e "\tCreating gitconfig symlinks..."
+echo -e "ln -s $DOTFILESHOME/git/gitconfig ~/.gitconfig"
+ln -s $DOTFILESHOME/git/gitconfig ~/.gitconfig
 # -----------------------------------------------------------------------
 # ==============================================================================
 

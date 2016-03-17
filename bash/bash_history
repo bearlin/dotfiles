@@ -1,9 +1,0 @@
-brew update
-git branch -a
-git status
-git log
-git config -l
-pwd
-whoami
-uname -a
-df -h
