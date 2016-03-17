@@ -1,8 +1,7 @@
 #!/bin/bash
 
-DOTVIMHOME=~/.vim
-source $DOTVIMHOME/scripts/handy_functions.sh
 DOTFILESHOME=~/.dotfiles
+source $DOTFILESHOME/scripts/handy_functions.sh
 TEMP_DIR=~/.temp/powerlinefonts
 
 usage() {
