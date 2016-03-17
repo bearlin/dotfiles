@@ -23,10 +23,10 @@ Then run the script:
 # Set git env (Optional):
 After installed this dotfiles, your ~/.gitconfig already set to user.name=BearLin and user.email=bear.lin.001@gmail.com, you can update them again with below script:
 ```
-  ~/.vim/scripts/set_env_git.sh [your name] [our email]
+  ~/.dotfiles/scripts/set_env_git.sh [your name] [our email]
 
   e.g.:
-  ~/.vim/scripts/set_env_git.sh BearLin bear.lin.001@gmail.com vim
+  ~/.dotfiles/scripts/set_env_git.sh BearLin bear.lin.001@gmail.com vim
 ```
 
 #References
