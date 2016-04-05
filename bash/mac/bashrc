@@ -39,3 +39,12 @@ if [ $? -eq 0 ]; then
 fi
 # -----------------------------
 
+# Handy functions for AOSP development environment
+# -----------------------------
+# mount the android file image
+function mountAndroid { hdiutil attach ~/ws/aosp/AOSP.dmg -mountpoint /Volumes/android; }
+
+# unmount the android file image
+function umountAndroid() { hdiutil detach /Volumes/android; }
+# -----------------------------
+
