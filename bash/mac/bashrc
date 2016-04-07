@@ -19,6 +19,7 @@ alias bc='bc -l'
 # [Extra tools under ~/.local/bin/]
 # -----------------------------
 export PATH=~/.local/bin:$PATH
+export PATH=~/bin:$PATH
 # -----------------------------
 
 # Enable powerline for bash
