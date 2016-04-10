@@ -43,12 +43,19 @@ fi
 # Handy functions and configurations for AOSP development environment
 # -----------------------------
 # mount the android file image
-function mountAndroid { hdiutil attach ~/ws/aosp/AOSP.dmg -mountpoint /Volumes/android; }
+# function mountAndroid { hdiutil attach ~/ws/aosp/AOSP.dmg -mountpoint /Volumes/android; }
+function mountAndroid { hdiutil attach ~/ws/aosp/AOSP.dmg -mountpoint ~/ws/android; }
 
 # unmount the android file image
-function umountAndroid() { hdiutil detach /Volumes/android; }
+# function umountAndroid() { hdiutil detach /Volumes/android; }
+function umountAndroid() { hdiutil detach ~/ws/android; }
 
 # set the number of open files to be 1024
 ulimit -S -n 1024
+
+# curl not based on SecureTransport
+# This fix aosp make error "Unsupported curl, please use a curl not based on
+# SecureTransport" by below brew install "brew install curl --with-openssl"
+export PATH=/usr/local/opt/curl/bin:$PATH
 # -----------------------------
 
