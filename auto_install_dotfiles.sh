@@ -15,6 +15,7 @@ FILES_TO_BACKUP=".bashrc \
                  .tmux.conf \
                  .minttyrc \
                  .globalrc \
+                 .zshrc \
                  .gitconfig"  # list of files to move to DOTFILESBACKUP folder
 
 PLATFORM=$1 # mac or cygwin
@@ -122,6 +123,14 @@ echo -e "\tCreating gitconfig symlinks..."
 echo -e "ln -s $DOTFILESHOME/git/gitconfig ~/.gitconfig"
 ln -s $DOTFILESHOME/git/gitconfig ~/.gitconfig
 # -----------------------------------------------------------------------
+
+# For zshrc:
+# -----------------------------------------------------------------------
+echo -e "\tCreating zshrc symlinks..."
+echo -e "ln -s $DOTFILESHOME/zsh/zshrc ~/.zshrc"
+ln -s $DOTFILESHOME/zsh/zshrc ~/.zshrc
+# -----------------------------------------------------------------------
+
 # ==============================================================================
 
 cd -
