@@ -127,8 +127,8 @@ ln -s $DOTFILESHOME/git/gitconfig ~/.gitconfig
 # For zshrc:
 # -----------------------------------------------------------------------
 echo -e "\tCreating zshrc symlinks..."
-echo -e "ln -s $DOTFILESHOME/zsh/zshrc ~/.zshrc"
-ln -s $DOTFILESHOME/zsh/zshrc ~/.zshrc
+echo -e "ln -s $DOTFILESHOME/zsh/$PLATFORM/zshrc ~/.zshrc"
+ln -s $DOTFILESHOME/zsh/$PLATFORM/zshrc ~/.zshrc
 # -----------------------------------------------------------------------
 
 # ==============================================================================
