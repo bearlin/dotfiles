@@ -212,3 +212,14 @@ export PATH=~/bin:$PATH
 # https://github.com/bearlin/study_build_gnu_global_from_source
 # -----------------------------
 
+# Auto switch to zsh in cygwin
+# -----------------------------
+# Disabled because change default shell should use command line tool 'chsh'
+#
+# which zsh &>/dev/null
+# if [ $? -eq 0 ]; then
+#  # switch to zsh
+#  zsh
+# fi
+# -----------------------------
+
