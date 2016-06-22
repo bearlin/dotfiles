@@ -40,6 +40,13 @@ Or with below script:
   ~/.dotfiles/scripts/set_env_git.sh BearLin bear.lin.001@gmail.com vim
 ```
 
+# Install oh-my-zsh (Optional):
+After installed my dotfiles, a ~/.zshrc will be created, and then if you want to use "zsh + oh-my-zsh", just follow the install instructions at https://github.com/robbyrussell/oh-my-zsh, below are my steps :  
+```
+bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
 #References
 [USING GIT AND GITHUB TO MANAGE YOUR DOTFILES](http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/)  
 [Getting Started With Dotfiles](https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789)  
