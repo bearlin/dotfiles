@@ -1,5 +1,7 @@
 # http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html
 
+echo "Current shell : $SHELL"
+
 ## Colorize the ls output ##
 alias ls='ls -G'
 ## Use a long listing format ##
