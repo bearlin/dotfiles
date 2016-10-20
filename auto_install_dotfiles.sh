@@ -16,7 +16,6 @@ FILES_TO_BACKUP=".bashrc \
                  .minttyrc \
                  .globalrc \
                  .zshrc \
-                 .oh-my-zsh \
                  .gitconfig"  # list of files to move to DOTFILESBACKUP folder
 
 PLATFORM=$1 # mac or cygwin

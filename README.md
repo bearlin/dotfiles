@@ -1,15 +1,18 @@
 # dotfiles
 my dotfiles
 
-# Install oh-my-zsh (Optional):
-If you want to use "zsh + oh-my-zsh", just follow the install instructions at https://github.com/robbyrussell/oh-my-zsh, below are my steps :  
+# Install oh-my-zsh first (Optional):
+If you want to use "zsh + oh-my-zsh", just first change your shell to zsh (e.g. 'chsh -s /bin/zsh' in MAC) and then follow the install instructions at http://ohmyz.sh/ or https://github.com/robbyrussell/oh-my-zsh, below are my steps :  
 ```bash
+# via curl
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# via wget
+sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 ```
 
-After installed ~/.oh-my-zsh, a ~/.zshrc will be created, and then run './auto_install_dotfiles.sh {platform}' to replace ~/.zshrc with /zsh/{platform}/zshrc  
+After installed ~/.oh-my-zsh, a ~/.zshrc will be created, you shold now download the auto install script from next section and then run './auto_install_dotfiles.sh {platform}' to replace ~/.zshrc with /zsh/{platform}/zshrc  
 
-# Auto install steps:  
+# Download and run auto install script:  
 Get auto_install_dotfiles.sh use curl or wget :  
 ```sh
   curl -LSso "auto_install_dotfiles.sh" "https://raw.githubusercontent.com/bearlin/dotfiles/master/auto_install_dotfiles.sh"
@@ -17,7 +20,7 @@ Get auto_install_dotfiles.sh use curl or wget :
   wget "https://raw.githubusercontent.com/bearlin/dotfiles/master/auto_install_dotfiles.sh" -O "auto_install_dotfiles.sh" 
 ```
 
-Then run the script:  
+Then run the script according to your platform type:  
 ```sh
   chmod +x auto_install_dotfiles.sh
   ./auto_install_dotfiles.sh mac
