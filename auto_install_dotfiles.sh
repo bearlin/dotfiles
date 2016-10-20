@@ -16,6 +16,7 @@ FILES_TO_BACKUP=".bashrc \
                  .minttyrc \
                  .globalrc \
                  .zshrc \
+                 .oh-my-zsh \
                  .gitconfig"  # list of files to move to DOTFILESBACKUP folder
 
 PLATFORM=$1 # mac or cygwin
@@ -126,6 +127,9 @@ ln -s $DOTFILESHOME/git/gitconfig ~/.gitconfig
 
 # For zshrc:
 # -----------------------------------------------------------------------
+# Install oh-my-zsh first
+sh $DOTFILESHOME/scripts/install_oh-my-zsh.sh
+#
 echo -e "\tCreating zshrc symlinks..."
 echo -e "ln -s $DOTFILESHOME/zsh/$PLATFORM/zshrc ~/.zshrc"
 ln -s $DOTFILESHOME/zsh/$PLATFORM/zshrc ~/.zshrc
