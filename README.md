@@ -1,6 +1,14 @@
 # dotfiles
 my dotfiles
 
+# Install oh-my-zsh (Optional):
+If you want to use "zsh + oh-my-zsh", just follow the install instructions at https://github.com/robbyrussell/oh-my-zsh, below are my steps :  
+```bash
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+After installed ~/.oh-my-zsh, a ~/.zshrc will be created, and then run './auto_install_dotfiles.sh {platform}' to replace ~/.zshrc with /zsh/{platform}/zshrc  
+
 # Auto install steps:  
 Get auto_install_dotfiles.sh use curl or wget :  
 ```sh
@@ -38,13 +46,6 @@ Or with below script:
 
   e.g.:
   ~/.dotfiles/scripts/set_env_git.sh BearLin bear.lin.001@gmail.com vim
-```
-
-# Install oh-my-zsh (Optional):
-After installed my dotfiles, a ~/.zshrc will be created, and then if you want to use "zsh + oh-my-zsh", just follow the install instructions at https://github.com/robbyrussell/oh-my-zsh, below are my steps :  
-```
-bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
 #References
