@@ -127,12 +127,13 @@ ln -s $DOTFILESHOME/git/gitconfig ~/.gitconfig
 
 # For zshrc:
 # -----------------------------------------------------------------------
-# Install oh-my-zsh first
-sh $DOTFILESHOME/scripts/install_oh-my-zsh.sh
-#
 echo -e "\tCreating zshrc symlinks..."
 echo -e "ln -s $DOTFILESHOME/zsh/$PLATFORM/zshrc ~/.zshrc"
 ln -s $DOTFILESHOME/zsh/$PLATFORM/zshrc ~/.zshrc
+
+# Install oh-my-zsh first
+echo -e "\tInstalling ~/.oh-my-zsh, this will overwrite ~/.zshrc, so remember to symlinks ~/.zshrc to $DOTFILESHOME/zsh/$PLATFORM/zshrc again"
+sh $DOTFILESHOME/scripts/install_oh-my-zsh.sh
 # -----------------------------------------------------------------------
 
 # ==============================================================================
