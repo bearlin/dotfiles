@@ -46,6 +46,6 @@ rm $FILE_HPP_LIST
 rm $FILE_H_HPP_LIST
 rm $FILE_DIRNAME
 
-echo "Path to .clang_complete format..."
+echo "Convert path to .clang_complete format (prefix with a '-I')..."
 cp $FILE_UNIQUE $FILE_UNIQUE.bak
 sed -i'.bak' 's/^\./-I\./g' $FILE_UNIQUE
