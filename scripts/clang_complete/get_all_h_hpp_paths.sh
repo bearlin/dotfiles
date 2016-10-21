@@ -28,7 +28,14 @@ cp $FILE_H_LIST $FILE_H_HPP_LIST
 cat $FILE_HPP_LIST >> $FILE_H_HPP_LIST
 
 echo "Get directory path(s) by stripping filenames from full path(s)..."
-dirname `cat $FILE_H_HPP_LIST` > $FILE_DIRNAME
+ln=0
+for line in `cat $FILE_H_HPP_LIST`; do
+  ln=$((ln+1))
+  if ! ((ln % 50)); then
+    echo "[$ln] $line"
+  fi
+  dirname $line >> $FILE_DIRNAME
+done
 
 echo "Sort the path(s) to unique result..."
 sort -u $FILE_DIRNAME > $FILE_UNIQUE
