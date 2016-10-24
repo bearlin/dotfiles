@@ -22,6 +22,9 @@ alias bc='bc -l'
 # -----------------------------
 export PATH=~/.local/bin:$PATH
 export PATH=~/bin:$PATH
+
+# Fix python crash with vim and YCM plugin
+export DYLD_FORCE_FLAT_NAMESPACE=1
 # -----------------------------
 
 # Enable powerline for bash
