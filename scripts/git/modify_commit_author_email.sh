@@ -36,6 +36,7 @@ if [ "$UserInput" == "y" ]; then
     fi
     ' -- --all" > .git.change.use.email.sh
   # Execute the generated script
+  chmod 755 .git.change.use.email.sh
   ./.git.change.use.email.sh
   # Remove generatd script
   rm .git.change.use.email.sh
