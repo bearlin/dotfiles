@@ -91,6 +91,10 @@ ln -s $DOTFILESHOME/bash/$PLATFORM/bashrc ~/.bashrc
 
 # For tmux:
 # -----------------------------------------------------------------------
+if [ "$PLATFORM" == "mac" ]; then
+  echo -e "\tPlease 'brew install reattach-to-user-namespace' to prevent 'MacOSX programs pbpaste and pbcopy under tmux does not work' issue..."
+  echo -e "\tRef: https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard"
+fi
 echo -e "\tCreating tmux symlinks..."
 echo -e "ln -s $DOTFILESHOME/tmux/tmux.conf ~/.tmux.conf"
 ln -s $DOTFILESHOME/tmux/tmux.conf ~/.tmux.conf
