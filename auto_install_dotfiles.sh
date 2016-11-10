@@ -124,8 +124,8 @@ fi
 # For gitconfig:
 # -----------------------------------------------------------------------
 echo -e "\tCreating gitconfig symlinks..."
-echo -e "ln -s $DOTFILESHOME/git/gitconfig ~/.gitconfig"
-ln -s $DOTFILESHOME/git/gitconfig ~/.gitconfig
+echo -e "ln -s $DOTFILESHOME/git/gitconfig.default ~/.gitconfig"
+ln -s $DOTFILESHOME/git/gitconfig.default ~/.gitconfig
 # -----------------------------------------------------------------------
 
 # For zshrc:

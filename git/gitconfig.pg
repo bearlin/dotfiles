@@ -24,7 +24,7 @@
 	changed = green
 	untracked = cyan
 [user]
-	name = steven.lin
+	name = Steven Lin
 	email = steven.lin@positivegrid.com
 [core]
 	editor = vim
