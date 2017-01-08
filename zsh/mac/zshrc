@@ -76,6 +76,11 @@ export PATH=~/bin:$PATH
 # export DYLD_FORCE_FLAT_NAMESPACE=1
 # -----------------------------
 
+# Extra evnironmant variables
+# -----------------------------
+export GOPATH=~/ws/mygo
+# -----------------------------
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
