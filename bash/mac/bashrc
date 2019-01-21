@@ -64,3 +64,21 @@ ulimit -S -n 1024
 export PATH=/usr/local/opt/curl/bin:$PATH
 # -----------------------------
 
+# Homebrew python
+# -----------------------------
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+# -----------------------------
+
+# NVM
+# -----------------------------
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# -----------------------------
+#
+# Docker
+# -----------------------------
+alias mcdkr='docker run -it -v /Users/bearlin/.composer:/root/.composer -v /Users/bearlin/.ssh/:/root/.ssh -v $(pwd)/:/app -w /app dockerhub.mc.box/mc/phpenv7:4.5.0 bash'
+alias mcdkrvim='docker run -it -v /Users/bearlin/.composer:/root/.composer -v /Users/bearlin/.ssh/:/root/.ssh -v $(pwd)/:/root/app -w /root/app vim_for_php /bin/bash'
+# -----------------------------
+

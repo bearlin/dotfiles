@@ -78,7 +78,34 @@ export PATH=~/bin:$PATH
 
 # Extra evnironmant variables
 # -----------------------------
-export GOPATH=~/ws/mygo
+# export GOPATH=~/ws/mygo
+# -----------------------------
+
+# Homebrew python
+# -----------------------------
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+# -----------------------------
+
+# NVM
+# -----------------------------
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# To fix for below tmux+nvm+npm errors, please manually remove old npm from your system
+    #   Current shell : /bin/zsh
+    #   nvm is not compatible with the npm config "prefix" option: currently set to "/usr/local"
+    #   Run `npm config delete prefix` or `nvm use --delete-prefix v8.12.0 --silent` to unset it.
+    #
+    #   Refs :
+    #   https://github.com/creationix/nvm/issues/1880#issuecomment-410722725
+    #   https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx/
+# -----------------------------
+
+# Docker
+# -----------------------------
+alias mcdkr='docker run -it -v /Users/bearlin/.composer:/root/.composer -v /Users/bearlin/.ssh/:/root/.ssh -v $(pwd)/:/app -w /app dockerhub.mc.box/mc/phpenv7:4.5.0 bash'
+alias mcdkrvim='docker run -it -v /Users/bearlin/.composer:/root/.composer -v /Users/bearlin/.ssh/:/root/.ssh -v $(pwd)/:/root/app -w /root/app vim_for_php /bin/bash'
 # -----------------------------
 
 # You may need to manually set your language environment
