@@ -102,12 +102,6 @@ export NVM_DIR="$HOME/.nvm"
     #   https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx/
 # -----------------------------
 
-# Docker
-# -----------------------------
-alias mcdkr='docker run -it -v /Users/bearlin/.composer:/root/.composer -v /Users/bearlin/.ssh/:/root/.ssh -v $(pwd)/:/app -w /app dockerhub.mc.box/mc/phpenv7:4.5.0 bash'
-alias mcdkrvim='docker run -it -v /Users/bearlin/.composer:/root/.composer -v /Users/bearlin/.ssh/:/root/.ssh -v $(pwd)/:/root/app -w /root/app vim_for_php /bin/bash'
-# -----------------------------
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
