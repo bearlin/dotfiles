@@ -103,6 +103,11 @@ export PATH=~/bin:$PATH
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 # -----------------------------
 
+# Homebrew sbin
+# -----------------------------
+export PATH="/usr/local/sbin:$PATH"
+# -----------------------------
+
 # NVM
 # -----------------------------
 export NVM_DIR="$HOME/.nvm"
