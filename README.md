@@ -12,6 +12,12 @@ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install
 
 After installed ~/.oh-my-zsh, a ~/.zshrc will be created, you shold now download the auto install script from next section and then run './auto_install_dotfiles.sh {platform}' to replace ~/.zshrc with /zsh/{platform}/zshrc  
 
+# [tmux] Fix 'Using the Mac OS X programs pbpaste and pbcopy under tmux does not work':
+[IMPORTANT] MAC may need to 'brew install reattach-to-user-namespace' or the tmux will [exited] at startup:  
+```sh
+brew install reattach-to-user-namespace
+```
+
 # Download and run auto install script:  
 Get auto_install_dotfiles.sh use curl or wget :  
 ```sh
