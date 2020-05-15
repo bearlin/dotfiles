@@ -24,7 +24,7 @@
 	changed = green
 	untracked = cyan
 [user]
-	name = BearLin
+	name = steven.lin
 	email = bear.lin.001@gmail.com
 [core]
 	editor = vim
