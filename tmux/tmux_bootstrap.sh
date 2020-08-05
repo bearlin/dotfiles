@@ -11,14 +11,14 @@ byebye() {
   exit 0
 }
 
-if [ "$#" -lt 3 ]; then
-  usage
-  byebye "$@"
-fi
+# if [ "$#" -lt 3 ]; then
+  # usage
+  # byebye "$@"
+# fi
 
-SESSIONNAME="tmux-session-01"
-if [ "" != $4 ]; then
-  SESSIONNAME=$4
+SESSIONNAME="slin-tmux-session-01"
+if [ "" != $1 ]; then
+  SESSIONNAME=$1
 fi
 echo "SESSIONNAME=$SESSIONNAME"
 
@@ -32,7 +32,7 @@ tmux new-session -d -s $SESSIONNAME
 # -n 'Server1' 'ssh xx@x.x.x.x' portion tells tmux to name the window Server1 and execute the 'ssh xx@x.x.x.x' command in it.
 tmux new-window -t $SESSIONNAME:1
 tmux new-window -t $SESSIONNAME:2
-tmux new-window -t $SESSIONNAME:3 -n "$1" "ssh $2@$3"
+# tmux new-window -t $SESSIONNAME:3 -n "$1" "ssh $2@$3"
 
 # Tells tmux that you want to active window 1 of session '$SESSIONNAME' 
 tmux select-window -t $SESSIONNAME:1
