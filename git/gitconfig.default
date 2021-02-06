@@ -1,5 +1,5 @@
 [alias]
-	lg = log --branches --remotes --tags --decorate=full --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	lg = log --branches --remotes --tags --decorate=full --graph --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an: %ce>%Creset' --date=local
 	co = checkout
 	br = branch
 	rem = remote
@@ -28,3 +28,7 @@
 	email = bear.lin.001@gmail.com
 [core]
 	editor = vim
+[pull]
+	rebase = false
+[log]
+	date = local
