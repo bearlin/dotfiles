@@ -89,59 +89,40 @@ source $ZSH/oh-my-zsh.sh
 export PATH=~/.local/bin:$PATH
 export PATH=~/bin:$PATH
 
-# Fix python crash with vim and YCM plugin
-# export DYLD_FORCE_FLAT_NAMESPACE=1
-# -----------------------------
-
-# Extra evnironmant variables
-# -----------------------------
-# export GOPATH=~/ws/mygo
-# -----------------------------
-
 # Homebrew python
-# -----------------------------
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-# -----------------------------
 
 # Homebrew sbin
-# -----------------------------
 export PATH="/usr/local/sbin:$PATH"
 # -----------------------------
 
 # NVM
 # -----------------------------
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# To fix for below tmux+nvm+npm errors, please manually remove old npm from your system
-    #   Current shell : /bin/zsh
-    #   nvm is not compatible with the npm config "prefix" option: currently set to "/usr/local"
-    #   Run `npm config delete prefix` or `nvm use --delete-prefix v8.12.0 --silent` to unset it.
-    #
-    #   Refs :
-    #   https://github.com/creationix/nvm/issues/1880#issuecomment-410722725
-    #   https://stackabuse.com/how-to-uninstall-node-js-from-mac-osx/
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 # -----------------------------
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+# Docker
+# -----------------------------
+# alias mcdkrphp74='docker run -it -v /Users/stevenlin/.composer:/root/.composer -v /Users/stevenlin/.ssh/:/root/.ssh -v $(pwd)/:/app -w /app dockerhub.mc.box/mc/phpenv74:3.3.0 bash'
+# -----------------------------
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+# pyenv
+# -----------------------------
+  # Add the pyenv command-line utility to your PATH,
+  # export PYENV_ROOT="$HOME/.pyenv"
+  # export PATH="$PYENV_ROOT/bin:$PATH"
+  # Run the output of pyenv init --path to enable shims.
+  eval "$(pyenv init --path)"
+  # enable autocompletion and all subcommands
+  eval "$(pyenv init -)"
+  #eval "$(pyenv virtualenv-init -)"
+# -----------------------------
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# kubectl
+# -----------------------------
+  source <(kubectl completion zsh)
+  alias k=kubectl
+  complete -F __start_kubectl k
+# -----------------------------
