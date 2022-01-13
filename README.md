@@ -26,6 +26,12 @@ Get auto_install_dotfiles.sh use curl or wget :
   wget "https://raw.githubusercontent.com/bearlin/dotfiles/master/auto_install_dotfiles.sh" -O "auto_install_dotfiles.sh" 
 ```
 
+Backup the original bash settings:  
+```sh
+cp ~/.bashrc ~/.bashrc.ori
+cp ~/.bash_logout ~/.bash_logout.ori
+```
+
 Then run the script according to your platform type:  
 ```sh
   chmod +x auto_install_dotfiles.sh
