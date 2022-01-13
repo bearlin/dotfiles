@@ -6,7 +6,7 @@
 # [dotfiles.github.io - Your unofficial guide to dotfiles on GitHub](https://dotfiles.github.io/)  
 
 HOMEDIR=~
-DOTFILESREPOSITORY=https://github.com/bearlin/dotfiles.git      # dotfiles repository from my github.com
+DOTFILESREPOSITORY=git@github.com:bearlin/dotfiles.git          # dotfiles repository from my github.com
 DOTFILESHOME=~/.dotfiles                                        # .dotfiles directory
 DOTFILESBACKUP=~/.dots_backup                                   # old ~/.* backup
 FILES_TO_BACKUP=".bashrc \
