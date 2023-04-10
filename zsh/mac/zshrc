@@ -143,3 +143,8 @@ export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 source ~/ws/github/ds_scripts/ds_shell_settings.sh
 # ==================================================================================
 
+# Replace default ruby 2.6 with ruby 3.1
+# -----------------------------
+# From brew install ruby@3.1
+export PATH="/usr/local/opt/ruby@3.1/bin:$PATH"
+# -----------------------------
