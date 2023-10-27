@@ -125,12 +125,17 @@ export PATH="/usr/local/sbin:$PATH"
   source <(kubectl completion zsh)
   alias k=kubectl
   complete -F __start_kubectl k
+
+  # https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke
+  #export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 # -----------------------------
 
 # goole-cloud-sdk
 # -----------------------------
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+# source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+# source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 # -----------------------------
 
 # brew mysql-client
@@ -148,3 +153,7 @@ source ~/ws/github/ds_scripts/ds_shell_settings.sh
 # From brew install ruby@3.1
 export PATH="/usr/local/opt/ruby@3.1/bin:$PATH"
 # -----------------------------
+
+# added by Snowflake SnowSQL installer v1.2
+export PATH=/Applications/SnowSQL.app/Contents/MacOS:$PATH
+
